@@ -7,3 +7,17 @@
 фразы и определять, относятся ли они к одной компании или нет.
 
 [Исходные данные - full_data.csv](https://drive.google.com/drive/folders/1N-s6r0vYi_XO79_Bp8sCsm9ylFFyp3V3?usp=sharing)
+
+## Результаты обучения
+
+| model     | Parameters                      | Accuracy    |  P  | R    |     |
+| ----------|:-------------------------------:| -----       |-----|------|-----|
+| Name comparison | TF-Idf                    |         | 0.89| 0.87 |     |
+| SNN, Bert |LSTM 128, Embeddig 768           | 0.92        | 0.82| 0.84 |     |
+| SNN       |LSTM 64 , Embeddig 100           | 0.97        | 0.94| 0.91 |     |
+| SNN       |LSTM 64 , Embeddig 50            | 0.97        | 0.95| 0.93 |     |
+| SNN       |LSTM 128,64 , Embeddig 150       | 0.97        | 0.93| 0.94 |     |
+| SNN       |LSTM 128,64 , Embeddig 50        | 0.94        | 0.84| 0.95 |     |
+| SNN       |Dense 256,128 , Embeddig 100     | 0.97        | 0.95| 0.94 |     |
+| SNN       |Dense 128 , Embeddig 100         | 0.98        | 0.96| 0.94 |     |
+| SNN       |Dense 64 , Embeddig 50           | 0.92        | 0.82| 0.86 |     |
