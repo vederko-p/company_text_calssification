@@ -2,7 +2,6 @@ from predict_company import get_predict
 import pandas as pd
 from configs.data_conf import data_config
 
-
 def main(name):
     list_company = get_predict(name)
 
@@ -10,5 +9,4 @@ def main(name):
 
 
 if __name__ == '__main__':
-    pred = main('Les Tricots Duval And Raymond')
-    print(pred[0])
+    print(main())

@@ -39,6 +39,6 @@ def get_predict(target_company) -> list[tuple[str, float]]:
 
     model = sn.get_siamese_model(8, 100, 128)
     model.load_weights(model_config['weights'])
-    similarity = model.predict([target_token_crop, filtered_token_crop])
+    similarity = model.predict([target_token_crop, filtered_token_crop]).tolist()
 
     return sorted(list(zip(filtered_companys, similarity)), key=lambda tup: tup[1], reverse=True)
