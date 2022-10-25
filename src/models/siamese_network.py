@@ -2,7 +2,7 @@ from tensorflow.keras.layers import Input, Dense, Dropout, BatchNormalization, A
 from tensorflow.keras.layers import Activation, Lambda, Embedding, SpatialDropout1D, Flatten
 from tensorflow.keras.models import Model
 from keras import regularizers
-from cosine_layer import cosine_vectorized, cos_dist_output_shape
+from models.cosine_layer import cosine_vectorized, cos_dist_output_shape
 
 
 def get_siamese_model(input_shape, embedding_len, dense_units):
