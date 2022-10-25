@@ -2,3 +2,4 @@
 data
 /notebooks/.ipynb_checkpoints/
 notebooks/5. Base methods.ipynb
+notebooks/tensorboard_runs/
