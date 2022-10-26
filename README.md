@@ -37,11 +37,11 @@
 | model     | Parameters                      | Accuracy    |  P  | R    |
 | ----------|:-------------------------------:| -----       |-----|------|
 | Name comparison | TF-Idf                    |             | 0.89| 0.87 |
-| SNN, Bert |LSTM 128, Embeddig 768           | 0.92        | 0.82| 0.84 |
-| SNN       |LSTM 64 , Embeddig 100           | 0.97        | 0.94| 0.91 |
-| SNN       |LSTM 64 , Embeddig 50            | 0.97        | 0.95| 0.93 |
-| SNN       |LSTM 128,64 , Embeddig 150       | 0.97        | 0.93| 0.94 |
-| SNN       |LSTM 128,64 , Embeddig 50        | 0.94        | 0.84| 0.95 |
-| SNN       |Dense 256,128 , Embeddig 100     | 0.97        | 0.95| 0.94 |
-| SNN       |Dense 128 , Embeddig 100         | 0.98        | 0.96| 0.94 |
-| SNN       |Dense 64 , Embeddig 50           | 0.92        | 0.82| 0.86 |
+| Siamese Network, Bert |LSTM 128, Embeddig 768           | 0.92        | 0.82| 0.84 |
+| Siamese Network       |LSTM 64 , Embeddig 100           | 0.97        | 0.94| 0.91 |
+| Siamese Network       |LSTM 64 , Embeddig 50            | 0.97        | 0.95| 0.93 |
+| Siamese Network       |LSTM 128,64 , Embeddig 150       | 0.97        | 0.93| 0.94 |
+| Siamese Network       |LSTM 128,64 , Embeddig 50        | 0.94        | 0.84| 0.95 |
+| Siamese Network       |Dense 256,128 , Embeddig 100     | 0.97        | 0.95| 0.94 |
+| Siamese Network       |Dense 128 , Embeddig 100         | 0.98        | 0.96| 0.94 |
+| Siamese Network       |Dense 64 , Embeddig 50           | 0.92        | 0.82| 0.86 |
