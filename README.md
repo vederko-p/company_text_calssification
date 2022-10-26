@@ -105,4 +105,4 @@ $k$ - количество ответов, в которых модель уве
 
     python3 test_model.py "Название компании" (название в двойных ковычках)
 
-    python3 test_model.py "Michelin" (название в двойных ковычках)
+    python3 test_model.py "Michelin"
