@@ -108,8 +108,8 @@ def ranking_precision(
 
 
 def fix_precision_in_empty_case(
-    list_of_pred: List[Tuple[str, float]]
+    list_of_pred: List[Tuple[str, float]], k=10, m=3
 ):
     err = sum([prob for _, prob in list_of_pred])
-    fixed_precision = 1 / (1 + err)
+    fixed_precision = (1 / (1 + err))**m
     return fixed_precision
