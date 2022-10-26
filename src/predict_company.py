@@ -18,7 +18,7 @@ def get_predict(target_company) -> list[tuple[str, float]]:
 
     filtered_companys = frequency_filter(target_company, list_companys, dictionary)
     if not filtered_companys:
-        filtered_companys = np.random.choice(list_companys, size=20)
+        filtered_companys = np.random.choice(list_companys, size=10)
 
     target_token = tokenizer.texts_to_sequences([target_company])[0]
     filtered_token = tokenizer.texts_to_sequences(filtered_companys)

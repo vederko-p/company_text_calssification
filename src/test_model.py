@@ -4,7 +4,7 @@ import time
 
 def main(name):
     list_company = get_predict(name)
-    recomend_company = [company for company, similarity in list_company if (similarity > 0.5)]
+    recomend_company = [company for company, similarity in list_company if (similarity > 0.7)]
     print()
     print()
     if not recomend_company:
