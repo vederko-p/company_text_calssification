@@ -3,3 +3,7 @@ data
 /notebooks/.ipynb_checkpoints/
 notebooks/5. Base methods.ipynb
 notebooks/tensorboard_runs/
+src/__pycache__/
+src/configs/__pycache__/
+src/models/__pycache__/
+src/preprocessing/__pycache__/
