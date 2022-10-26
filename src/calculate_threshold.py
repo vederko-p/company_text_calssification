@@ -4,10 +4,11 @@ from typing import List
 from metrics import *
 from configs.data_conf import data_config
 from predict_company import get_predict
+import tqdm
 
 
-test_data = pd.read_csv(pd.read_csv(data_config['test_path']))
-phraze_classes_test = pd.read_csv(pd.read_csv(data_config['phraze_classes_test.csv']))
+test_data = pd.read_csv(data_config['test_path'])
+phraze_classes_test = pd.read_csv(data_config['phraze_classes'])
 phraze_classes_test.index = phraze_classes_test['phraze']
 PHRAZE_CLASSES_TEST = phraze_classes_test
 
@@ -85,10 +86,13 @@ class RankingPrecision:
         return precision
 
 
-test_data = np.hstack([test_data.name_1.values, test_data.name_2.values])
+test_data = np.unique(np.hstack([test_data.name_1.values, test_data.name_2.values]))
 rank_prec = RankingPrecision(PHRAZE_CLASSES_TEST)
-for target in test_data:
+prec_matrix = []
+for target in tqdm.tqdm(test_data):
     test_pred = get_predict(target)
-    rank_prec(target, 0.5, test_pred)
+    prec = rank_prec(target, [0.4, 0.5, 0.6, 0.7, 0.8, 0.9], test_pred)
+    prec_matrix.append(prec)
 
-
+average_prec = np.sum(prec_matrix, axis=1)
+print(average_prec)

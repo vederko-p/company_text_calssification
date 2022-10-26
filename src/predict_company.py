@@ -23,7 +23,7 @@ def get_predict(target_company) -> list[tuple[str, float]]:
     target_token = tokenizer.texts_to_sequences([target_company])[0]
     filtered_token = tokenizer.texts_to_sequences(filtered_companys)
     if len(target_token) > 8:
-        target_token_crop = np.array(target_token[:8])
+        target_token_crop = np.array([target_token[:8]])
     else:
         target_token_crop = np.zeros((1, 8))
         target_token_crop[0, :len(target_token)] = target_token
@@ -39,6 +39,6 @@ def get_predict(target_company) -> list[tuple[str, float]]:
 
     model = sn.get_siamese_model(8, 100, 128)
     model.load_weights(model_config['weights'])
-    similarity = model.predict([target_token_crop, filtered_token_crop]).tolist()
+    similarity = model.predict([target_token_crop, filtered_token_crop])
 
     return sorted(list(zip(filtered_companys, similarity)), key=lambda tup: tup[1], reverse=True)
